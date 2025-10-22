@@ -1489,3 +1489,11 @@ nav ul li a.active-nav {
     text-decoration: none; /* Removes the underline from the link */
     color: inherit; /* Keeps text color consistent */
 }
+/* Style to ensure the form submission link looks and behaves like the button */
+.form-submit-link {
+    text-decoration: none; /* Remove default link underline */
+    text-align: center;    /* Center the text inside the link block */
+    display: inline-block; /* Allows the link to take width and height */
+    
+    /* Inherits all other styling from .submit-btn (font, color, padding, etc.) */
+}
