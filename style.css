@@ -1,11 +1,22 @@
-/* Color Variables (based on the image) */
+/* Color Variables (from the Style Guide and User Updates) */
 :root {
-    --color-primary-brown: #986540; /* Header and Footer background */
-    --color-secondary-tan: #f0e6c5; /* Main section background */
-    --color-text-dark: #333333;
+    --color-header-background: #CC8449; /* NEW: Header background color */
+    --color-footer-background: #BD9764; /* NEW: Footer background color */
+    
+    --color-primary-brown: #593519; /* Used for main title text and button border */
+    --color-secondary-tan: #f5f5dc; /* Main section background */
+    --color-text-dark: #000000;
     --color-text-light: #ffffff;
-    --color-highlight-red: #d07575; /* The 'AND SPARK NEW IDEAS' color */
-    --color-button-yellow: #f5d070;
+    --color-highlight-red: #E27D60; /* The "AND SPARK NEW IDEAS" color */
+    --color-button-yellow: #FFFE31; /* Bright yellow */
+    --color-header-logo-bg: #e7d6d0; /* Pinkish background for logo placeholder */
+}
+
+/* Typography Variables (from the Style Guide) */
+:root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lora', serif;
+    --font-call-to-action: 'Roboto Serif', serif;
 }
 
 /* Base Styles */
@@ -16,18 +27,18 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif; /* A clear, readable font for body text */
+    font-family: var(--font-body); 
     color: var(--color-text-dark);
 }
 
 /* Header / Navigation Bar */
 header {
-    background-color: var(--color-primary-brown);
+    /* Uses the new header background color */
+    background-color: var(--color-header-background); 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
-    /* Ensure text color is light for contrast */
     color: var(--color-text-light);
 }
 
@@ -38,27 +49,28 @@ header {
 }
 
 .logo-placeholder {
-    /* Simulating the circular logo image with a color block */
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #e8a2a2; /* Rough color of the logo background */
+    background-color: var(--color-header-logo-bg); 
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    font-weight: 900;
-    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-family: var(--font-heading);
 }
 
 .site-info h1 {
+    font-family: var(--font-heading);
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .site-info p {
+    font-family: var(--font-body);
     font-size: 12px;
     font-weight: 400;
     margin-top: 2px;
@@ -75,6 +87,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: var(--font-heading);
     text-decoration: none;
     color: var(--color-text-light);
     font-weight: 700;
@@ -88,9 +101,11 @@ nav ul li a:hover {
 
 /* Review Button */
 .review-btn {
+    font-family: var(--font-body);
     text-decoration: none;
     background-color: var(--color-button-yellow);
-    color: var(--color-primary-brown);
+    /* Changed text color to a contrasting brown */
+    color: var(--color-primary-brown); 
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 700;
@@ -107,7 +122,7 @@ nav ul li a:hover {
 /* Main Hero Section */
 main {
     background-color: var(--color-secondary-tan);
-    min-height: calc(100vh - 80px - 200px); /* Full height minus header and footer */
+    min-height: calc(100vh - 80px - 200px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,36 +135,38 @@ main {
 }
 
 .title-main {
-    font-family: 'Playfair Display', serif; /* A serif font to mimic the custom typography */
-    font-size: 7vw; /* Responsive font size */
+    font-family: var(--font-call-to-action);
+    font-size: 6.5vw; 
     font-weight: 900;
     line-height: 1.1;
     color: var(--color-primary-brown);
-    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2); 
     margin-bottom: 20px;
 }
 
-/* Specific highlight color */
 .highlight {
-    color: var(--color-highlight-red);
+    color: var(--color-highlight-red); 
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1); 
 }
 
 .subtitle {
+    font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 40px;
-    color: #555;
+    color: var(--color-text-dark);
 }
 
 /* Join Now Button */
 .join-btn {
+    font-family: var(--font-call-to-action);
     display: inline-block;
     text-decoration: none;
     background-color: var(--color-button-yellow);
     color: var(--color-text-dark);
     padding: 15px 35px;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     border: 2px solid var(--color-primary-brown);
@@ -163,7 +180,8 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: var(--color-primary-brown);
+    /* Uses the new footer background color */
+    background-color: var(--color-footer-background); 
     color: var(--color-text-light);
     padding: 30px 10%;
     font-size: 14px;
@@ -181,18 +199,22 @@ footer {
 }
 
 .footer-brand h3 {
+    font-family: var(--font-body);
     font-size: 16px;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
 .footer-brand p {
+    font-family: var(--font-body);
     font-size: 12px;
+    font-weight: 400;
     margin-top: 5px;
 }
 
 .stay-tuned {
-    margin-top: 15px;
     font-weight: 700;
+    margin-top: 15px;
 }
 
 .social-icons a {
@@ -212,7 +234,9 @@ footer {
 }
 
 .link-group h4 {
+    font-family: var(--font-body);
     font-size: 14px;
+    font-weight: 700;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -222,9 +246,11 @@ footer {
 }
 
 .link-group ul li a {
+    font-family: var(--font-body);
     text-decoration: none;
     color: var(--color-text-light);
     font-size: 12px;
+    font-weight: 400;
     line-height: 2;
     transition: color 0.3s;
 }
@@ -234,11 +260,14 @@ footer {
 }
 
 .contact-info p {
+    font-family: var(--font-body);
     font-size: 12px;
+    font-weight: 400;
     line-height: 1.8;
 }
 
 .copyright {
+    font-family: var(--font-body);
     text-align: center;
     padding-top: 15px;
     font-size: 10px;
