@@ -538,60 +538,51 @@ nav ul li a.active-nav {
    Join Page Specific Styles
    ======================== */
 
-/* Main Container and Layout */
-.join-main {
-    /* Uses the robust flex-grow method from previous suggestions */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; /* Adjust as needed, flex-grow should handle total height */
-    padding: 60px 5%;
-}
+/* ... (keep existing styles for .join-main and .join-text-content) ... */
 
 .join-section {
     display: flex;
-    gap: 80px;
+    gap: 80px; /* Keep a good gap */
     align-items: center;
-    max-width: 1200px;
+    max-width: 1300px; /* Increased max-width of the whole section */
     width: 100%;
-}
-
-/* Left Content (Text) Styling */
-.join-text-content {
-    flex: 1; /* Takes up available space */
-    max-width: 500px; 
-}
-
-.join-title {
-    font-family: var(--font-call-to-action);
-    font-size: 50px;
-    font-weight: 900;
-    color: var(--color-primary-brown);
-    margin-bottom: 25px;
-}
-
-.join-description {
-    font-family: var(--font-body);
-    font-size: 20px;
-    line-height: 1.7;
-    color: var(--color-text-dark);
-}
-
-.join-description strong {
-    font-weight: 700;
-    color: var(--color-primary-brown);
 }
 
 /* Right Content (Form) Styling */
 .registration-form-container {
-    flex-shrink: 0; /* Prevents the form box from shrinking */
-    width: 400px;
+    flex-shrink: 0; 
+    width: 500px; /* Make it wider - increased from 400px to 500px */
+    max-width: 500px; /* Ensure it doesn't exceed this width even on larger screens */
     padding: 10px;
-    background-color: var(--color-secondary-tan); /* Light tan border/background */
+    background-color: var(--color-secondary-tan);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* ... (keep existing styles for .registration-form, form-title, label, input, submit-btn) ... */
+
+
+/* Responsive Design for Join Page */
+@media (max-width: 900px) {
+    .join-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .join-text-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .join-title {
+        font-size: 40px;
+    }
+
+    .registration-form-container {
+        width: 90%; /* Allow it to be more flexible on small screens */
+        max-width: 450px; /* Set a reasonable max-width for smaller screens */
+    }
+}
 .registration-form {
     background-color: var(--color-highlight-red); /* The main reddish-orange box */
     padding: 30px;
@@ -673,5 +664,33 @@ nav ul li a.active-nav {
     .registration-form-container {
         width: 100%;
         max-width: 400px; /* Keep form reasonably sized on small screens */
+    }
+}
+/* Left Content (Text) Styling */
+.join-title {
+    font-family: var(--font-call-to-action);
+    font-size: 70px; /* INCREASED from 50px to 70px */
+    font-weight: 900;
+    color: var(--color-primary-brown);
+    margin-bottom: 30px; /* Adjusted margin for better spacing */
+}
+
+.join-description {
+    font-family: var(--font-body);
+    font-size: 24px; /* INCREASED from 20px to 24px */
+    line-height: 1.7;
+    color: var(--color-text-dark);
+}
+
+/* Also update the responsive font size for smaller screens: */
+@media (max-width: 900px) {
+    /* ... other styles ... */
+    
+    .join-title {
+        font-size: 55px; /* INCREASED from 40px to 55px on mobile */
+    }
+
+    .join-description {
+        font-size: 20px; /* INCREASED from 16px (default mobile) to 20px */
     }
 }
