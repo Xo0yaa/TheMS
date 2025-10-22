@@ -1223,7 +1223,7 @@ nav ul li a.active-nav {
 
 .project-level-btn:hover {
     /* Subtle color change on hover */
-    background-color: #e8b92b; 
+    background-color: #ffce31; 
     /* Simulate pressing down */
     transform: translateY(4px); 
     box-shadow: 0 4px 0px var(--color-primary-brown), 
@@ -1266,4 +1266,219 @@ nav ul li a.active-nav {
         font-size: 16px;
         padding: 0 10px;
     }
+}
+
+/* ========================
+   Beginner Projects Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout */
+.beginner-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.beginner-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Title Styling (Similar to Projects page, but specific to this page) */
+.beginner-title {
+    font-family: var(--font-call-to-action);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-button-yellow); /* Yellow color for the heading */
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 0 var(--color-text-dark); /* Subtle black stroke/shadow */
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two main columns */
+    gap: 40px;
+}
+
+/* Individual Project Items (Row) */
+.project-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--color-header-logo-bg); /* Light background for separation */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image Styling */
+.project-image {
+    width: 150px; /* Fixed size for the image to maintain alignment */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 3px solid var(--color-highlight-red);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Details and Description Box */
+.project-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure details take up full height of the container */
+    background-color: var(--color-header-logo-bg); /* Match item background */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Description Text */
+.project-description {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    margin-bottom: 15px;
+}
+
+/* Start Now Button (Project-specific CTA) */
+.start-btn {
+    font-family: var(--font-call-to-action);
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    align-self: flex-end; /* Align button to the right/bottom corner */
+    width: 120px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.start-btn:hover {
+    background-color: #e8b92b; /* Slightly darker hover color */
+    transform: translateY(-1px);
+}
+
+/* Specific styling for the Description boxes (Right/Left placement in the image) */
+/* The general .project-item flex handles the alternating image/details layout */
+.project-item:nth-child(even) .project-details {
+    order: -1; /* Puts the details block first (on the left) for even-numbered items */
+}
+.project-item:nth-child(even) .project-image {
+    order: 0;
+}
+/* For odd items (1 and 3), the image is naturally first (order: -1 or just default) */
+.project-item:nth-child(odd) .project-image {
+    order: -1;
+}
+.project-item:nth-child(odd) .project-details {
+    order: 0;
+}
+
+
+/* Responsive Design for Beginner Projects Page */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        gap: 30px;
+    }
+    
+    .project-item {
+        flex-direction: column; /* Stack image and details vertically */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+    
+    /* Reset alternating order for mobile to keep a consistent stack */
+    .project-item:nth-child(even) .project-details,
+    .project-item:nth-child(even) .project-image,
+    .project-item:nth-child(odd) .project-details,
+    .project-item:nth-child(odd) .project-image {
+        order: initial;
+    }
+
+    .project-details {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .project-description {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* ========================
+   Intermediate Projects Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout (Reuses .beginner-main styles for positioning) */
+.intermediate-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.intermediate-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Title Styling (Same look as Beginner, but specific selector) */
+.intermediate-title {
+    font-family: var(--font-call-to-action);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-button-yellow); /* Yellow color for the heading */
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 0 var(--color-text-dark); /* Subtle black stroke/shadow */
+}
+
+/* ========================
+   Advanced Projects Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout (Reuses positioning styles) */
+.advanced-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.advanced-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Title Styling (Same look as Beginner/Intermediate, but specific selector) */
+.advanced-title {
+    font-family: var(--font-call-to-action);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-button-yellow); /* Yellow color for the heading */
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 0 var(--color-text-dark); /* Subtle black stroke/shadow */
 }
