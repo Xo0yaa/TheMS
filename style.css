@@ -1482,3 +1482,10 @@ nav ul li a.active-nav {
     margin-bottom: 50px;
     text-shadow: 2px 2px 0 var(--color-text-dark); /* Subtle black stroke/shadow */
 }
+/* Style to ensure the logo link wrapper maintains the correct flex layout */
+.logo-link-area {
+    display: flex; /* Makes the logo and text align horizontally */
+    align-items: center;
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Keeps text color consistent */
+}
