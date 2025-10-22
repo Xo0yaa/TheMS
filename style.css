@@ -694,3 +694,576 @@ nav ul li a.active-nav {
         font-size: 20px; /* INCREASED from 16px (default mobile) to 20px */
     }
 }
+
+/* ========================
+   Contact Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the section */
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* -------------------
+   Left Side: Contact Form
+   ------------------- */
+.contact-form-container {
+    flex: 1;
+    max-width: 450px; /* Control the form width */
+    background-color: var(--color-footer-background); /* Darker brown background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.form-instruction-bar {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-light);
+    background-color: var(--color-header-background); /* Header brown for the bar */
+    padding: 10px 20px;
+    margin: -10px -10px 20px -10px; /* Align with the container edges */
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+}
+
+.contact-form label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    resize: vertical; /* Allow message box to be resized vertically */
+}
+
+/* Custom styles for the submit button on the contact form */
+.contact-submit-btn {
+    font-family: var(--font-call-to-action);
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+    align-self: center;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-submit-btn:hover {
+    background-color: #f7e097;
+    transform: translateY(-1px);
+}
+
+
+/* -------------------
+   Right Side: Info Boxes
+   ------------------- */
+.contact-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.info-box {
+    background-color: var(--color-header-logo-bg); /* Light tan background */
+    border: 1px solid var(--color-highlight-red);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-title {
+    font-family: var(--font-call-to-action);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-highlight-red);
+    margin-bottom: 10px;
+}
+
+.info-description {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.info-detail {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary-brown);
+}
+
+.info-detail a {
+    color: var(--color-primary-brown);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-detail a:hover {
+    color: var(--color-highlight-red);
+}
+
+.location-description strong {
+    font-weight: 700;
+    color: var(--color-primary-brown);
+}
+
+
+/* Responsive Design for Contact Page */
+@media (max-width: 850px) {
+    .contact-section {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 40px;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        max-width: 100%; /* Allow them to take full width */
+    }
+}
+
+/* ========================
+   Contact Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the section */
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* -------------------
+   Left Side: Contact Form
+   ------------------- */
+.contact-form-container {
+    flex: 1;
+    max-width: 450px; /* Control the form width */
+    background-color: var(--color-footer-background); /* Darker brown background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.form-instruction-bar {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-light);
+    background-color: var(--color-header-background); /* Header brown for the bar */
+    padding: 10px 20px;
+    margin: -10px -10px 20px -10px; /* Align with the container edges */
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+}
+
+.contact-form label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    resize: vertical; /* Allow message box to be resized vertically */
+}
+
+/* Custom styles for the submit button on the contact form */
+.contact-submit-btn {
+    font-family: var(--font-call-to-action);
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 25px;
+    align-self: center;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-submit-btn:hover {
+    background-color: #f7e097;
+    transform: translateY(-1px);
+}
+
+
+/* -------------------
+   Right Side: Info Boxes
+   ------------------- */
+.contact-info-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 500px;
+}
+
+.info-box {
+    background-color: var(--color-header-logo-bg); /* Light tan background */
+    border: 1px solid var(--color-highlight-red);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-title {
+    font-family: var(--font-call-to-action);
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-highlight-red);
+    margin-bottom: 10px;
+}
+
+.info-description {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.info-detail {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary-brown);
+}
+
+.info-detail a {
+    color: var(--color-primary-brown);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-detail a:hover {
+    color: var(--color-highlight-red);
+}
+
+.location-description strong {
+    font-weight: 700;
+    color: var(--color-primary-brown);
+}
+
+
+/* Responsive Design for Contact Page */
+@media (max-width: 850px) {
+    .contact-section {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 40px;
+    }
+    
+    .contact-form-container,
+    .contact-info-container {
+        max-width: 100%; /* Allow them to take full width */
+    }
+}
+
+/* ========================
+   Review Page Specific Styles
+   ======================== */
+
+/* Main Layout */
+.review-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 60px 5%;
+}
+
+.review-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* -------------------
+   Left Side: Review Form
+   ------------------- */
+.review-form-container {
+    flex: 1;
+    max-width: 500px;
+    background-color: var(--color-primary-brown); /* Dark brown box */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.form-instruction {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-light);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.review-form input,
+.review-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    resize: none; /* Prevent resizing on message box */
+}
+
+/* Custom styles for the submit button on the review form */
+.review-submit-btn {
+    font-family: var(--font-call-to-action);
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-self: center;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
+/* -------------------
+   Right Side: CTA and Stars
+   ------------------- */
+
+.review-cta-title {
+    font-family: var(--font-call-to-action);
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color-button-yellow); /* Yellow text for the CTA */
+    /* Updated text-shadow for stroke effect and original shadow */
+    text-shadow: 
+        -2px -2px 0 var(--color-primary-brown), /* Top-left stroke */
+        2px -2px 0 var(--color-primary-brown),  /* Top-right stroke */
+        -2px 2px 0 var(--color-primary-brown),   /* Bottom-left stroke */
+        2px 2px 0 var(--color-primary-brown),    /* Bottom-right stroke */
+        4px 4px 0px rgba(0, 0, 0, 0.2);          /* Original subtle shadow */
+    margin-bottom: 50px;
+}
+
+/* Star Icons */
+.star-icon {
+    font-size: 110px; /* INCREASED from 80px to 110px */
+    color: var(--color-text-dark); /* Black fill for the star */
+    line-height: 1;
+    /* Updated text-shadow for a more defined stroke and inner glow */
+    text-shadow: 
+        -3px -3px 0 var(--color-button-yellow), /* Top-left stroke (yellow outline) */
+        3px -3px 0 var(--color-button-yellow),  /* Top-right stroke */
+        -3px 3px 0 var(--color-button-yellow),   /* Bottom-left stroke */
+        3px 3px 0 var(--color-button-yellow),    /* Bottom-right stroke */
+        0 0 10px rgba(255, 255, 0, 0.5);         /* Subtle inner glow */
+}
+
+/* Responsive Design for Review Page - Stars Adjustment */
+@media (max-width: 900px) {
+    /* ... other styles ... */
+    
+    .star-icon {
+        font-size: 80px; /* Adjusted to be bigger for mobile as well (from 60px to 80px) */
+    }
+}
+/* ========================
+   Projects Page Specific Styles
+   ======================== */
+
+/* Main Container and Layout */
+.projects-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; 
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.projects-section {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Page Title */
+.projects-title {
+    font-family: var(--font-call-to-action);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-text-dark); /* Black title */
+    margin-bottom: 50px;
+}
+
+/* Project Level Buttons Container */
+.project-level-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Project Level Buttons */
+.project-level-btn {
+    font-family: var(--font-call-to-action);
+    display: inline-block;
+    text-decoration: none;
+    /* Uses the new var(--color-button-yellow) which is #FFCE31 */
+    background-color: var(--color-button-yellow); 
+    color: var(--color-text-dark);
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    
+    /* Stronger shadow for the 3D/pop-out look */
+    box-shadow: 0 8px 0px var(--color-primary-brown), 
+                0 12px 15px rgba(0, 0, 0, 0.3); 
+    
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.project-level-btn:hover {
+    /* Subtle color change on hover */
+    background-color: #e8b92b; 
+    /* Simulate pressing down */
+    transform: translateY(4px); 
+    box-shadow: 0 4px 0px var(--color-primary-brown), 
+                0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Description Text */
+.projects-description {
+    font-family: var(--font-body);
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); /* Subtle lift */
+}
+
+/* Responsive Design for Projects Page */
+@media (max-width: 768px) {
+    .projects-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+    }
+
+    .project-level-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .project-level-btn {
+        width: 80%; /* Make buttons wider on mobile */
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    .projects-description {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+}
