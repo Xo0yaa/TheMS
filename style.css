@@ -1,0 +1,246 @@
+/* Color Variables (based on the image) */
+:root {
+    --color-primary-brown: #986540; /* Header and Footer background */
+    --color-secondary-tan: #f0e6c5; /* Main section background */
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-highlight-red: #d07575; /* The 'AND SPARK NEW IDEAS' color */
+    --color-button-yellow: #f5d070;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* A clear, readable font for body text */
+    color: var(--color-text-dark);
+}
+
+/* Header / Navigation Bar */
+header {
+    background-color: var(--color-primary-brown);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    /* Ensure text color is light for contrast */
+    color: var(--color-text-light);
+}
+
+/* Logo and Site Info */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    /* Simulating the circular logo image with a color block */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e8a2a2; /* Rough color of the logo background */
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.site-info h1 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.site-info p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-button-yellow);
+}
+
+/* Review Button */
+.review-btn {
+    text-decoration: none;
+    background-color: var(--color-button-yellow);
+    color: var(--color-primary-brown);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.review-btn:hover {
+    background-color: #f7e097;
+}
+
+
+/* Main Hero Section */
+main {
+    background-color: var(--color-secondary-tan);
+    min-height: calc(100vh - 80px - 200px); /* Full height minus header and footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.title-main {
+    font-family: 'Playfair Display', serif; /* A serif font to mimic the custom typography */
+    font-size: 7vw; /* Responsive font size */
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-primary-brown);
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px;
+}
+
+/* Specific highlight color */
+.highlight {
+    color: var(--color-highlight-red);
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* Join Now Button */
+.join-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--color-primary-brown);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.join-btn:hover {
+    background-color: #f7e097;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-primary-brown);
+    color: var(--color-text-light);
+    padding: 30px 10%;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.stay-tuned {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.social-icons a {
+    color: var(--color-text-light);
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-button-yellow);
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-group h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group ul li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 12px;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.link-group ul li a:hover {
+    color: var(--color-button-yellow);
+}
+
+.contact-info p {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 10px;
+    font-weight: 400;
+}
