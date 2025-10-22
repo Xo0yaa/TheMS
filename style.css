@@ -1,10 +1,28 @@
-* {
+/* Color Variables (from the Style Guide and User Updates) */
+:root {
+    --color-header-background: #CC8449; /* NEW: Header background color */
+    --color-footer-background: #BD9764; /* NEW: Footer background color */
+    
+    --color-primary-brown: #593519; /* Used for main title text and button border */
+    --color-secondary-tan: #f5f5dc; /* Main section background */
+    --color-text-dark: #000000;
+    --color-text-light: #ffffff;
+    --color-highlight-red: #E27D60; /* The "AND SPARK NEW IDEAS" color */
+    --color-button-yellow: #FFFE31; /* Bright yellow */
+    --color-header-logo-bg: #e7d6d0; /* Pinkish background for logo placeholder */
+}
+
+/* Typography Variables (from the Style Guide) */
+:root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Lora', serif;* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    
     font-family: 'Georgia', serif;
     line-height: 1.6;
 }
@@ -275,4 +293,261 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+}
+    --font-call-to-action: 'Roboto Serif', serif;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body); 
+    color: var(--color-text-dark);
+}
+
+/* Header / Navigation Bar */
+header {
+    /* Uses the new header background color */
+    background-color: var(--color-header-background); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    color: var(--color-text-light);
+}
+
+/* Logo and Site Info */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-header-logo-bg); 
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.site-info h1 {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.site-info p {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-family: var(--font-heading);
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: 700;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-button-yellow);
+}
+
+/* Review Button */
+.review-btn {
+    font-family: var(--font-body);
+    text-decoration: none;
+    background-color: var(--color-button-yellow);
+    /* Changed text color to a contrasting brown */
+    color: var(--color-primary-brown); 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.review-btn:hover {
+    background-color: #f7e097;
+}
+
+
+/* Main Hero Section */
+main {
+    background-color: var(--color-secondary-tan);
+    min-height: calc(100vh - 80px - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero {
+    max-width: 800px;
+}
+
+.title-main {
+    font-family: var(--font-call-to-action);
+    font-size: 6.5vw; 
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--color-primary-brown);
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--color-highlight-red); 
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1); 
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+}
+
+/* Join Now Button */
+.join-btn {
+    font-family: var(--font-call-to-action);
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--color-button-yellow);
+    color: var(--color-text-dark);
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--color-primary-brown);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.join-btn:hover {
+    background-color: #f7e097;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    /* Uses the new footer background color */
+    background-color: var(--color-footer-background); 
+    color: var(--color-text-light);
+    padding: 30px 10%;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.stay-tuned {
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: var(--color-text-light);
+    font-size: 20px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-button-yellow);
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.link-group h4 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.link-group ul {
+    list-style: none;
+}
+
+.link-group ul li a {
+    font-family: var(--font-body);
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2;
+    transition: color 0.3s;
+}
+
+.link-group ul li a:hover {
+    color: var(--color-button-yellow);
+}
+
+.contact-info p {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.copyright {
+    font-family: var(--font-body);
+    text-align: center;
+    padding-top: 15px;
+    font-size: 10px;
+    font-weight: 400;
 }
