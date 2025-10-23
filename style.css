@@ -1495,6 +1495,6 @@ nav ul li a.active-nav {
     text-align: center;    /* Center the text inside the link block */
     display: inline-block; /* Allows the link to take width and height */
     
-    
+    /* Inherits all other styling from .submit-btn (font, color, padding, etc.) */
 }
 
